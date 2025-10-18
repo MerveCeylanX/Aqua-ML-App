@@ -1,0 +1,24 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter checkpointleri (app tarafında pek yok ama ekleyelim)
+.ipynb_checkpoints/
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Sanal ortam dosyaları
+.venv/
+env/
+venv/
+*.env
+
+# Log dosyaları
+*.log
+
+# Streamlit’in cache klasörü
+.streamlit/
