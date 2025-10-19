@@ -39,7 +39,7 @@ def create_test_data():
         
         # Adsorbent parametreleri
         "BET_Surface_Area(m2/g)": 796.0,
-        "Total_Pore_Volume(cm3/g)": 0.342696991,
+        "Total_Pore_Volume(cm3/g)": 0.342,
         "Micropore_Volume(cm3/g)": 0.22,
         "Average_Pore_Diameter(nm)": 2.71,
         "pHpzc": 5.4,
