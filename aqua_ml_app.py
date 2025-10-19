@@ -118,9 +118,9 @@ h1, h2, h3, h4, h5 {
 # -------------------------------------------------
 # HEADER GÖRSELİ
 # -------------------------------------------------
-if Path("header.jpeg").exists():
+if Path("header.jpg").exists():
     st.image(
-        "header.jpeg",
+        "header.jpg",
         use_container_width=True,
         caption="A real-world adsorption dataset and ML model for qe prediction",
     )
