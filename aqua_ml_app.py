@@ -1,11 +1,29 @@
-# app.py — qe tahmini (tekil giriş + Excel yükle)
+# aqua_ml_app.py — Aqua-ML: Aktif Karbon Adsorpsiyon Kapasitesi Tahmin Uygulaması
 # -*- coding: utf-8 -*-
 """
-Güncellenen sürüm (Plotly uyarısı & UI API düzeltmeleri):
-- st.plotly_chart anahtar argümanları config={...} içine alındı (yardımcı fonksiyon: show_plotly).
-- use_column_width => use_container_width'e geçirildi.
-- Varsayılan girişler 0 başlamıyor; boş değerler NaN'a çevriliyor (mevcut davranış korunuyor).
-- Hata mesajları ve Excel hizalama davranışı korunuyor.
+Aqua-ML: Makine Öğrenmesi Tabanlı Adsorpsiyon Kapasitesi Tahmin Sistemi
+
+Bu uygulama, aktif karbon ile farmasötik kirleticilerin adsorpsiyonunu tahmin eden
+bir makine öğrenmesi arayüzüdür.
+
+Özellikler:
+- Tekil parametre girişi ile tahmin
+- Excel/CSV toplu veri yükleme ve tahmin
+- 21 farklı farmasötik kirletici desteği
+- Sentez koşulları, adsorban özellikleri ve proses parametreleri ile tahmin
+- Interaktif duyarlılık analizleri (pH, sıcaklık, konsantrasyon, vb.)
+- Antibiyotik karşılaştırma grafikleri
+
+Model Girdileri:
+- Sentez Koşulları: Aktivasyon sıcaklığı, süresi, atmosfer, ajan oranı, vb.
+- Adsorban Özellikleri: BET yüzey alanı, gözenek hacmi, element analizi, vb.
+- Proses Koşulları: pH, sıcaklık, konsantrasyon, dozaj, temas süresi, vb.
+- Hedef İlaç: APAP, CIP, SMX, TC, OTC ve 16 farmasötik daha
+
+Gereksinimler:
+- best_model.joblib: Eğitilmiş ML modeli
+- best_model.meta.json: Model metadata ve feature listesi
+- ui_specs/drug_map.xlsx: İlaç adı ve kod eşleştirmeleri
 """
 
 from pathlib import Path
